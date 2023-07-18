@@ -7,12 +7,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Student extends People {
+    int sid;
     int grade;
 
     public Student(int sid, String name, String sex, int grade) {
         this.name = name;
         this.sex = sex;
         this.grade = grade;
-        this.id = sid;
+        this.sid = sid;
     }
 }

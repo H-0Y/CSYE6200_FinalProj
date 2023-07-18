@@ -4,11 +4,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
+@Data
 @NoArgsConstructor
 public class Advisor extends People {
-
+    int aid;
     public Advisor(int aid, String name, String sex) {
-        this.id = aid;
+        this.aid = aid;
         this.name = name;
         this.sex = sex;
     }
