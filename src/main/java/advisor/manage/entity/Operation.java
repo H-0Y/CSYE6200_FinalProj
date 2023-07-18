@@ -26,7 +26,7 @@ public class Operation {
     public void showStudent(){
         SqlUtil.doSqlWork(mapper -> {
             mapper.getStudentList().forEach(student -> {
-                java.lang.System.out.println(student.getSid()+"."+student.getName()+" "+student.getSex()+" "+student.getGrade()+"");
+                java.lang.System.out.println(student.getId()+"."+student.getName()+" "+student.getSex()+" "+student.getGrade()+"");
             });
         });
     }
@@ -35,7 +35,7 @@ public class Operation {
     public void showAdvisor(){
         SqlUtil.doSqlWork(mapper -> {
             mapper.getAdvisorList().forEach(advisor -> {
-                java.lang.System.out.println(advisor.getAid()+"."+ advisor.getName() + " "+ advisor.getSex());
+                java.lang.System.out.println(advisor.getId()+"."+ advisor.getName() + " "+ advisor.getSex());
             });
         });
     }
@@ -68,7 +68,7 @@ public class Operation {
                     int i = mapper.addAdvised(sid, bid);
                     if(i>0) {
                         java.lang.System.out.println("Successful!");
-                        log.info("add a new advised info: "+ "sid: "+ student.getSid() + " is advised by " + "aid: "+ advisor.getAid());
+                        log.info("add a new advised info: "+ "sid: "+ student.getId() + " is advised by " + "aid: "+ advisor.getId());
                     }
                     else java.lang.System.out.println("Failure, please try again");
                 }
@@ -185,15 +185,13 @@ public class Operation {
         SqlUtil.doSqlWork(mapper -> {
             java.lang.System.out.println("Please enter the sid of the student: ");
             Integer sid = scanner.nextInt() ;
-
             try {
                 Student student = mapper.getStudentBySid(sid);
 
-                java.lang.System.out.println(student.getSid()+"."+student.getName()+" "+student.getSex()+" "+student.getGrade());
+                java.lang.System.out.println(student.getId()+"."+student.getName()+" "+student.getSex()+" "+student.getGrade());
             } catch (NullPointerException e) {
                 java.lang.System.out.println("No such student was found, please try again");
             }
-
         });
     }
     // operation: query an advisor info by aid
@@ -203,7 +201,7 @@ public class Operation {
             Integer aid = scanner.nextInt();
             try {
                 Advisor advisor = mapper.getAdvisorByAid(aid);
-                java.lang.System.out.println(advisor.getAid()+"."+ advisor.getName() +" "+advisor.getSex());
+                java.lang.System.out.println(advisor.getId()+"."+ advisor.getName() +" "+advisor.getSex());
             } catch (NullPointerException e) {
                 java.lang.System.out.println("No such advisor was found, please try again");
             }
