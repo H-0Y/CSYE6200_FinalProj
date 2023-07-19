@@ -11,9 +11,9 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://sh-cynosdbmysql-grp-br2do6es.sql.tencentcdb.com:26151/5100_Project"/>
-                <property name="username" value="root"/>
-                <property name="password" value="Hly2274807"/>
+                <property name="url" value="jdbc:mysql://rm-uf64w67k7t4b7x1536o.mysql.rds.aliyuncs.com:3306/finalproj"/>
+                <property name="username" value="test_1"/>
+                <property name="password" value="Hly123456"/>
             </dataSource>
         </environment>
     </environments>
