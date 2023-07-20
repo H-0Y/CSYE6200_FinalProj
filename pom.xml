@@ -41,21 +41,21 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
-            <version>16</version> <!-- 替换成你所需的 JavaFX 版本 -->
+            <version>20</version> <!-- 替换成你所需的 JavaFX 版本 -->
         </dependency>
 
         <!-- JavaFX Controls Module -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>16</version> <!-- 替换成你所需的 JavaFX 版本 -->
+            <version>20</version> <!-- 替换成你所需的 JavaFX 版本 -->
         </dependency>
 
         <!-- JavaFX FXML Module -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>16</version> <!-- 替换成你所需的 JavaFX 版本 -->
+            <version>20</version> <!-- 替换成你所需的 JavaFX 版本 -->
         </dependency>
     </dependencies>
 
