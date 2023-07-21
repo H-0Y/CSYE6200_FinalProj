@@ -10,23 +10,45 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
-
-    @Override
-    public void start(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/login.fxml"));
-        Parent root = loader.load();
-        primaryStage.setTitle("Login Page");
-        primaryStage.setScene(new Scene(root, 300, 200));
-
-        // 获取控制器类并设置主舞台的控制器
-        LoginController controller = loader.getController();
-        primaryStage.show();
-    }
-
+    private static Stage stage;
     public static void main(String[] args) {
         launch(args);
     }
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        Main.stage = primaryStage;
+        primaryStage.setTitle("Student-Advisor Management System");
+        changeView("/login.fxml");
+        primaryStage.show();
+    }
 
+   public static void changeView(String fxml){
+        Parent root = null;
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxml));
+            root = loader.load();
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(Main.class.getResource("/application.css").toExternalForm());
+            stage.setScene(scene);
+        } catch (IOException e) {
+
+        }
+   }
+
+    public static void addView(String fxml){
+        Stage stage = new Stage();
+        Parent root = null;
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxml));
+            root = loader.load();
+            //stage.setScene(new Scene(root));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(Main.class.getResource("/application.css").toExternalForm());
+            stage.setScene(scene);
+        } catch (IOException e) {
+        }
+        stage.show();
+    }
 }
 
 

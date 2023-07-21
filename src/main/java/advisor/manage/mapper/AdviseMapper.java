@@ -12,6 +12,9 @@ public interface AdviseMapper {
     @Insert("insert into student(sid, name, sex, grade) values(#{sid}, #{name}, #{sex}, #{grade})")
     int addStudent(Student student);
 
+    @Update("UPDATE student SET name = #{name}, sex = #{sex}, grade = #{grade} WHERE sid = #{sid}")
+    void updateStudent(Student student);
+
     @Insert("insert into advisor(aid, name, sex) values(#{aid}, #{name}, #{sex})")
     int addAdvisor(Advisor advisor);
 
