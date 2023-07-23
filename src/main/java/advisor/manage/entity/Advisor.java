@@ -13,4 +13,8 @@ public class Advisor extends People {
         this.name = name;
         this.sex = sex;
     }
+
+    public String toString() {
+        return name;
+    }
 }

@@ -7,25 +7,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Skyblue;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.manage.application.StudentPageController">
+<AnchorPane prefHeight="449.0" prefWidth="630.0" style="-fx-background-color: Skyblue;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.manage.application.StudentPageController">
    <children>
-      <TableView fx:id="studentTableView" layoutX="78.0" layoutY="65.0" prefHeight="271.0" prefWidth="456.0">
+      <TableView fx:id="studentTableView" layoutX="44.0" layoutY="105.0" prefHeight="271.0" prefWidth="543.0">
           <columns>
-                  <TableColumn fx:id="sid" prefWidth="134.0" text="SID" />
-                  <TableColumn fx:id="name" prefWidth="96.0" text="Name" />
-                  <TableColumn fx:id="sex" minWidth="0.0" prefWidth="103.0" text="Sex" />
-            <TableColumn fx:id="grade" minWidth="0.0" prefWidth="118.0" text="Grade" />
+              <TableColumn fx:id="sid" prefWidth="117.0" text="SID" />
+              <TableColumn fx:id="name" prefWidth="101.0" text="Name" />
+              <TableColumn fx:id="sex" minWidth="0.0" prefWidth="92.0" text="Gender" />
+              <TableColumn fx:id="grade" minWidth="0.0" prefWidth="127.0" text="Entry Year" />
+            <TableColumn fx:id="advisor" minWidth="0.0" prefWidth="132.0" text="Advisor" />
           </columns>
       </TableView>
-      <Button layoutX="495.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleUpdateStuButton" text="Edit" />
-      <Button layoutX="214.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleDeleteStuButton" text="Delete" />
-      <Button layoutX="341.0" layoutY="350.0" mnemonicParsing="false" text="Search" />
-      <Button layoutX="94.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleAddStuButton" text="Add" />
-      <Button alignment="CENTER" layoutX="459.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleStudentListButton" prefHeight="25.0" prefWidth="69.0" text="Refresh" />
-      <Label alignment="CENTER" layoutX="199.0" layoutY="24.0" prefHeight="31.0" prefWidth="171.0" text="Student   List">
+      <Button layoutX="450.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleUpdateStuButton" text="Edit" />
+      <Button layoutX="530.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleDeleteStuButton" text="Delete" />
+      <Button layoutX="40.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleSearchStuButton" text="Search" />
+      <Button layoutX="358.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleAddStuButton" text="Add" />
+      <Button alignment="CENTER" layoutX="515.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleStudentListButton" prefHeight="25.0" prefWidth="69.0" text="Refresh" />
+      <Label alignment="CENTER" layoutX="207.0" prefHeight="69.0" prefWidth="217.0" text="Student   List" textAlignment="CENTER">
          <font>
-            <Font size="26.0" />
+            <Font name="System Bold" size="36.0" />
          </font>
       </Label>
+      <Button layoutX="41.0" layoutY="392.0" mnemonicParsing="false" onAction="#returnToHomeButton" text="Return" />
    </children>
 </AnchorPane>

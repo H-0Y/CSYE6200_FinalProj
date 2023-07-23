@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="341.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.manage.application.StuAddController">
+<AnchorPane prefHeight="341.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.manage.application.StuSearchController">
    <children>
       <Label layoutX="27.0" layoutY="61.0" text="ID" />
       <TextField fx:id="sid" layoutX="74.0" layoutY="57.0" />
@@ -16,8 +16,8 @@
       <TextField fx:id="name" layoutX="74.0" layoutY="98.0" />
       <TextField fx:id="grade" layoutX="74.0" layoutY="185.0" />
       <ChoiceBox fx:id="sex" layoutX="74.0" layoutY="139.0" prefHeight="25.0" prefWidth="161.0" />
-      <Button fx:id="confirmAddButton" layoutX="122.0" layoutY="273.0" mnemonicParsing="false" onAction="#confirmAddStuButton" text="Add" />
-      <ChoiceBox fx:id="advisor" layoutX="74.0" layoutY="231.0" prefHeight="25.0" prefWidth="161.0" />
-      <Label layoutX="22.0" layoutY="235.0" text="Advisor" />
+      <Button fx:id="confirmSearchButton" layoutX="126.0" layoutY="275.0" mnemonicParsing="false" onAction="#confirmSearchStuButton" text="Search" />
+      <ChoiceBox fx:id="advisor" layoutX="74.0" layoutY="228.0" prefHeight="25.0" prefWidth="161.0" />
+      <Label layoutX="23.0" layoutY="232.0" text="Advisor" />
    </children>
 </AnchorPane>
