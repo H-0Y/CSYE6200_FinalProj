@@ -1,0 +1,9 @@
+/* 设置所有场景的背景色为蓝色 */
+.root {
+    -fx-background-color: skyblue;
+}
+
+/* 设置按钮的背景色为黄色 */
+.button {
+    -fx-background-color: white;
+}

@@ -130,7 +130,6 @@ public class Operation {
         } catch (Exception e) {
             System.out.println("Failure, please check and try again.");
         }
-
     }
 
     // operation: delete a student info
