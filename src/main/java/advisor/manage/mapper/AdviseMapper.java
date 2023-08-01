@@ -49,6 +49,15 @@ public interface AdviseMapper {
     List<Student> searchStudentList(@Param("sid") Integer sid, @Param("name") String name, @Param("sex") String sex,
                                     @Param("grade") Integer grade, @Param("advisorName") String advisorName);
 
+    @SelectProvider(type = AdvisorSqlProvider.class, method = "searchAdvisorList")
+    @Results({
+            @Result(property = "aid", column = "aid"),
+            @Result(property = "name", column = "name"),
+            @Result(property = "sex", column = "sex")
+    })
+    List<Advisor> searchAdvisorList(@Param("searchId") Integer searchId,
+                                    @Param("searchName") String searchName,
+                                    @Param("searchSex") String searchSex);
     @Delete("delete from student where sid = #{sid}")
     int deleteStudentBySid(int sid);
 

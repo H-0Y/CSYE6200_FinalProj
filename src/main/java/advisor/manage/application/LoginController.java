@@ -16,7 +16,15 @@ public class LoginController {
     private TextField usernameField;
     @FXML
     private PasswordField passwordField;
+    @FXML
+    private TextField addUserName;
+    @FXML
+    private TextField addPassword;
+    @FXML
+    private TextField deleteUsername;
     private boolean isValidUser;
+
+
     @FXML
     private void handleLoginButton() {
         String username = usernameField.getText();
@@ -53,6 +61,48 @@ public class LoginController {
             }
         });
         return isValidUser;
+    }
+
+    @FXML
+    private void handleAddUserButton() {
+        String username = addUserName.getText();
+        String password = addPassword.getText();
+
+        if (!username.isEmpty() && !password.isEmpty()) {
+            SqlUtil.doSqlWork(mapper -> {
+                User newUser = new User(username, password);
+                int result = mapper.addUser(newUser);
+                if (result > 0) {
+                    log.info("User: " + username + " added successfully.");
+                    // You can add any additional UI updates or success messages here.
+                } else {
+                    log.info("Failed to add user: " + username);
+                    // You can add any error handling or UI updates here.
+                }
+            });
+        } else {
+            showErrorMessage("Please enter both username and password.");
+        }
+    }
+
+    @FXML
+    private void handleDeleteUserButton() {
+        String username = deleteUsername.getText();
+
+        if (!username.isEmpty()) {
+            SqlUtil.doSqlWork(mapper -> {
+                int result = mapper.deleteUser(username);
+                if (result > 0) {
+                    log.info("User: " + username + " deleted successfully.");
+                    // You can add any additional UI updates or success messages here.
+                } else {
+                    log.info("Failed to delete user: " + username);
+                    // You can add any error handling or UI updates here.
+                }
+            });
+        } else {
+            showErrorMessage("Please enter the username to delete.");
+        }
     }
 }
 

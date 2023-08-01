@@ -18,7 +18,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="218.0" layoutY="236.0" mnemonicParsing="false" text="Manage Advisor List" >
+      <Button layoutX="218.0" layoutY="236.0" mnemonicParsing="false" text="Manage Advisor List" onAction="#ShowAdvisorListButton">
          <font>
             <Font size="18.0" />
          </font>

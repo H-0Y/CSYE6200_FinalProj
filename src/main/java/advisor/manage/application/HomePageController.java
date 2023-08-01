@@ -9,4 +9,9 @@ public class HomePageController {
         StudentPageController studentPageController = (StudentPageController)Main.changeView("/student_page.fxml");
         studentPageController.showStudent();
     }
+
+    public void ShowAdvisorListButton() {
+        AdvisorPageController advisorPageController = (AdvisorPageController)Main.changeView("/advisor_page.fxml");
+        advisorPageController.showAdvisor();
+    }
 }

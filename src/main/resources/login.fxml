@@ -5,15 +5,27 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<!-- Import your controller package here -->
-<?import advisor.manage.application.LoginController?>
 
-<AnchorPane fx:controller="advisor.manage.application.LoginController"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="319.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutX="33.0" layoutY="89.0" text="User Name:" />
-      <TextField fx:id="usernameField" layoutX="107.0" layoutY="85.0" prefWidth="150.0" />
-      <Label layoutX="37.0" layoutY="125.0" text="Password:" />
-      <PasswordField fx:id="passwordField" layoutX="107.0" layoutY="121.0" prefWidth="150.0" />
-      <Button fx:id="loginButton" layoutX="113.0" layoutY="161.0" mnemonicParsing="false" text="Login" onAction="#handleLoginButton" />
-   </children>
+<!-- Import your controller package here -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="319.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.manage.application.LoginController">
+    <children>
+        <Label layoutX="20.0" layoutY="15.0" text="User Name:" />
+        <TextField fx:id="usernameField" layoutX="92.0" layoutY="11.0" prefWidth="150.0" />
+        <Label layoutX="20.0" layoutY="49.0" text="Password:" />
+        <PasswordField fx:id="passwordField" layoutX="92.0" layoutY="45.0" prefWidth="150.0" />
+        <Button fx:id="loginButton" layoutX="253.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleLoginButton" text="Login" />
+
+        <!-- Add User Section -->
+        <Label layoutX="16.0" layoutY="94.0" text="New User Name:" />
+        <TextField fx:id="addUserName" layoutX="117.0" layoutY="90.0" prefWidth="125.0" />
+        <Label layoutX="16.0" layoutY="126.0" text="New Password:" />
+        <PasswordField fx:id="addPassword" layoutX="117.0" layoutY="121.0" prefWidth="125.0" />
+        <Button layoutX="242.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleAddUserButton" text="Add User" />
+
+        <!-- Delete User Section -->
+        <Label layoutX="15.0" layoutY="169.0" text="Delete User:" />
+        <TextField fx:id="deleteUsername" layoutX="105.0" layoutY="165.0" prefWidth="125.0" />
+        <Button layoutX="236.0" layoutY="165.0" mnemonicParsing="false" onAction="#handleDeleteUserButton" text="Delete User" />
+    </children>
 </AnchorPane>
