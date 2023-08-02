@@ -33,9 +33,6 @@ public interface AdviseMapper {
     })
     List<Student> getAllStudentsWithAdvisors();
 
-    @Select("select * from student where sid = #{sid}")
-    Student getStudentBySid(int sid);
-
     @SelectProvider(type = StudentSqlProvider.class, method = "searchStudentAdvisor")
     @Results({
             @Result(property = "sid", column = "sid"),
@@ -68,9 +65,6 @@ public interface AdviseMapper {
     @Select("select * from advisor")
     List<Advisor> getAdvisorList();
 
-    @Select("select * from advisor where aid = #{aid}")
-    Advisor getAdvisorByAid(int aid);
-
     @Select("select * from advisor where aid = (select aid from advised where sid = #{sid})")
     Advisor getAdvisorByStudentId(int sid);
 
@@ -91,14 +85,9 @@ public interface AdviseMapper {
     void updateAdvisor(Advisor advisor);
 
 
-    @Select("select * from advised where id = #{id}")
-    Advised getAdvisedById(int id);
-
     @Delete("delete from advised where sid = #{sid}")
     int deleteAdvisedByStudentId(int sid);
 
-    @Delete("delete from advised where id = #{id}")
-    int deleteAdvisedById(int id);
 
     // User
     @Select("select * from users where username = #{username} and password = #{password}")

@@ -17,12 +17,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="211.0" layoutY="190.0" mnemonicParsing="false" onAction="#ShowAdvisorListButton" text="Manage Advisor List">
+      <Button layoutX="210.0" layoutY="190.0" mnemonicParsing="false" onAction="#ShowAdvisorListButton" prefHeight="35.0" prefWidth="180.0" text="Manage Advisor List">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="203.0" layoutY="256.0" mnemonicParsing="false" onAction="#ShowAddUserButton" prefHeight="35.0" prefWidth="195.0" text="Manage User Account">
+      <Button alignment="CENTER" layoutX="200.0" layoutY="255.0" mnemonicParsing="false" onAction="#ShowAddUserButton" prefHeight="35.0" prefWidth="201.0" text="Manage User Accounts">
          <font>
             <Font size="18.0" />
          </font>
