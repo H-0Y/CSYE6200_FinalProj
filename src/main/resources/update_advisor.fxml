@@ -9,7 +9,7 @@
 <AnchorPane prefHeight="270.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.manage.application.AdvUpdateController">
    <children>
       <Label layoutX="27.0" layoutY="61.0" text="ID" />
-      <TextField fx:id="aid" layoutX="74.0" layoutY="57.0" />
+      <TextField fx:id="aid" editable="false" layoutX="74.0" layoutY="57.0" />
       <Label layoutX="27.0" layoutY="102.0" text="Name" />
       <Label layoutX="27.0" layoutY="143.0" text="Sex" />
       <TextField fx:id="name" layoutX="74.0" layoutY="98.0" />

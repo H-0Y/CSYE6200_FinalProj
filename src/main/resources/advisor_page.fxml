@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.manage.application.AdvisorPageController">
    <children>
-      <TableView fx:id="advisorTableView" layoutX="100.0" layoutY="109.0" prefHeight="200.0" prefWidth="400.0">
+      <TableView fx:id="advisorTableView" layoutX="75.0" layoutY="99.0" prefHeight="233.0" prefWidth="451.0">
         <columns>
           <TableColumn fx:id="aid" prefWidth="75.0" text="AID" />
           <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
@@ -24,11 +24,11 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="100.0" layoutY="321.0" mnemonicParsing="false"  text="Return" onAction="#returnToHomeButton"/>
-      <Button layoutX="447.0" layoutY="321.0" mnemonicParsing="false" text="Delete" onAction="#handleDeleteAdvButton" />
-      <Button layoutX="388.0" layoutY="321.0" mnemonicParsing="false" text="Edit" onAction="#handleUpdateAdvButton"/>
-      <Button layoutX="325.0" layoutY="321.0" mnemonicParsing="false" text="Add" onAction="#handleAddAdvButton"/>
-      <Button layoutX="99.0" layoutY="73.0" mnemonicParsing="false" text="Search" onAction="#handleSearchAdvButton"/>
-      <Button layoutX="440.0" layoutY="73.0" mnemonicParsing="false" text="Refresh" onAction="#handleAdvisorsListButton"/>
+      <Button layoutX="76.0" layoutY="346.0" mnemonicParsing="false" onAction="#returnToHomeButton" text="Return" />
+      <Button layoutX="473.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleDeleteAdvButton" text="Delete" />
+      <Button layoutX="415.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleUpdateAdvButton" text="Edit" />
+      <Button layoutX="354.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleAddAdvButton" text="Add" />
+      <Button layoutX="75.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleSearchAdvButton" text="Search" />
+      <Button layoutX="466.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleAdvisorsListButton" text="Refresh" />
    </children>
 </AnchorPane>

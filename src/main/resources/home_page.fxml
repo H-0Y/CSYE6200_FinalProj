@@ -7,26 +7,29 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advisor.manage.application.HomePageController">
    <children>
-      <Label alignment="CENTER" graphicTextGap="8.0" layoutX="120.0" layoutY="45.0" prefHeight="117.0" prefWidth="361.0" text="Welcome to Home Page!" textAlignment="CENTER">
+      <Label alignment="CENTER" graphicTextGap="8.0" layoutX="119.0" layoutY="14.0" prefHeight="117.0" prefWidth="361.0" text="Welcome to Home Page!" textAlignment="CENTER">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" layoutX="217.0" layoutY="171.0" mnemonicParsing="false" onAction="#ShowStudentListButton" text="Manage Student List">
+      <Button alignment="CENTER" layoutX="210.0" layoutY="122.0" mnemonicParsing="false" onAction="#ShowStudentListButton" text="Manage Student List">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="218.0" layoutY="236.0" mnemonicParsing="false" onAction="#ShowAdvisorListButton" text="Manage Advisor List">
+      <Button layoutX="211.0" layoutY="190.0" mnemonicParsing="false" onAction="#ShowAdvisorListButton" text="Manage Advisor List">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="210.0" layoutY="299.0" mnemonicParsing="false" onAction="#ShowAddUserButton" text="Manage User Account">
+      <Button alignment="CENTER" layoutX="203.0" layoutY="256.0" mnemonicParsing="false" onAction="#ShowAddUserButton" prefHeight="35.0" prefWidth="195.0" text="Manage User Account">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="return_button" layoutX="504.0" layoutY="344.0" mnemonicParsing="false" onAction="#returnToLoginButton" text="log out" />
+      <Button fx:id="return_button" layoutX="262.0" layoutY="320.0" mnemonicParsing="false" onAction="#returnToLoginButton" text="log out">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
    </children>
 </AnchorPane>

@@ -1,9 +1,19 @@
 /* 设置所有场景的背景色为蓝色 */
+/*.root {*/
+/*    -fx-background-color: skyblue;*/
+/*}*/
+
+/* styles.css */
+
+/* 设置所有窗口的背景图 */
 .root {
-    -fx-background-color: skyblue;
+    -fx-background-image: url("/images/degree-bg.jpg");
+    -fx-background-size: cover; /* 图片尺寸适应场景 */
+    -fx-background-repeat: no-repeat; /* 不重复背景图 */
 }
+
 
 /* 设置按钮的背景色为黄色 */
 .button {
-    -fx-background-color: white;
+    -fx-background-color: #a6a6a5;
 }

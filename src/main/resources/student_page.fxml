@@ -17,6 +17,9 @@
               <TableColumn fx:id="grade" minWidth="0.0" prefWidth="127.0" text="Entry Year" />
             <TableColumn fx:id="advisor" minWidth="0.0" prefWidth="132.0" text="Advisor" />
           </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
       <Button layoutX="450.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleUpdateStuButton" text="Edit" />
       <Button layoutX="530.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleDeleteStuButton" text="Delete" />

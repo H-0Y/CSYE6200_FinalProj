@@ -10,11 +10,13 @@ public class HomePageController {
         studentPageController.showStudent();
     }
 
+    @FXML
     public void ShowAdvisorListButton() {
         AdvisorPageController advisorPageController = (AdvisorPageController)Main.changeView("/advisor_page.fxml");
         advisorPageController.showAdvisor();
     }
 
+    @FXML
     public void ShowAddUserButton() {
         Main.changeView("/add_user.fxml");
     }

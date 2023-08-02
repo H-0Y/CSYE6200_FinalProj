@@ -1,17 +1,13 @@
 package advisor.manage.application;
 
 import advisor.manage.Main;
-import advisor.manage.entity.Advisor;
 import advisor.manage.entity.User;
 import advisor.manage.sql.SqlUtil;
 import javafx.fxml.FXML;
 import lombok.extern.java.Log;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
-import java.util.List;
 
 @Log
 public class UserAddController {
@@ -22,9 +18,9 @@ public class UserAddController {
     @FXML
     private TextField deleteUsername;
 
-    private void showErrorMessage(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
+    private void showAlertMessage(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information");
         alert.setHeaderText(null);
         alert.setContentText(message);
         ButtonType okButton = new ButtonType("OK");
@@ -37,13 +33,17 @@ public class UserAddController {
         String password = addPassword.getText();
 
         try {
-            SqlUtil.doSqlWork(mapper -> {
-                User user = new User(userName, password);
-                mapper.addUser(user);
-            });
-            log.info("User: " + userName + " logins successfully.");
+            if (userName.isEmpty() || password.isEmpty()) {
+                showAlertMessage("Please enter both username and password.");
+            } else {
+                SqlUtil.doSqlWork(mapper -> {
+                    User user = new User(userName, password);
+                    mapper.addUser(user);
+                    showAlertMessage("User: " + userName + " is added successfully.");
+                });
+            }
         } catch (Exception e) {
-            showErrorMessage("Please enter both username and password.");
+            showAlertMessage("An error occurred while adding the user.");
         }
     }
 
@@ -51,24 +51,24 @@ public class UserAddController {
     @FXML
     private void handleDeleteUserButton() {
         String userName = deleteUsername.getText();
-
-        try {
+        if (userName.isEmpty() ) {
+            showAlertMessage("Please enter username to delete.");
+        } else try {
             SqlUtil.doSqlWork(mapper -> {
                 int deletedRows = mapper.deleteUser(userName);
                 if (deletedRows > 0) {
-                    log.info("User: " + userName + " deleted successfully.");
-
+                    showAlertMessage("User " + userName + " is deleted successfully.");
                 } else {
-                    log.info("Failed to delete user: " + userName);
+                    showAlertMessage("User " + userName + " does not exist.");
                 }
             });
         } catch (Exception e) {
-            System.out.println("Failed to delete user. Please check and try again.");
+            showAlertMessage("An error occurred while deleting the user.");
         }
     }
 
     @FXML
-    private void returnToLoginButton() {
-        Main.changeView("/login.fxml");
+    private void returnToHomeButton() {
+        Main.changeView("/home_page.fxml");
     }
 }
