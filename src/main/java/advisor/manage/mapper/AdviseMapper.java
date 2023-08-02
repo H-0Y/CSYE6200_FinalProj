@@ -87,6 +87,10 @@ public interface AdviseMapper {
     @Update("update advised set aid = #{aid} where sid = #{sid}")
     int updateAdvised(@Param("sid") int sid, @Param("aid") int aid);
 
+    @Update("UPDATE advisor SET name = #{name}, sex = #{sex} WHERE aid = #{aid}")
+    void updateAdvisor(Advisor advisor);
+
+
     @Select("select * from advised where id = #{id}")
     Advised getAdvisedById(int id);
 

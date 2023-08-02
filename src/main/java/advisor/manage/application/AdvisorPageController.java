@@ -70,6 +70,16 @@ public class AdvisorPageController {
         }
     }
 
+    @FXML
+    private void handleUpdateAdvButton() {
+        //get current selected student
+        Advisor advisor = advisorTableView.getSelectionModel().getSelectedItem();
+        if(advisor != null){
+            AdvUpdateController.setCurAdvisor(advisor);
+            Main.addView("/update_advisor.fxml");
+        }
+    }
+
     public void showAdvisor(){
         SqlUtil.doSqlWork(mapper -> {
             List<Advisor> advisorList = mapper.getAdvisorList();

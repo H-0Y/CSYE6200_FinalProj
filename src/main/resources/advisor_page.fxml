@@ -26,7 +26,7 @@
       </Label>
       <Button layoutX="100.0" layoutY="321.0" mnemonicParsing="false"  text="Return" onAction="#returnToHomeButton"/>
       <Button layoutX="447.0" layoutY="321.0" mnemonicParsing="false" text="Delete" onAction="#handleDeleteAdvButton" />
-      <Button layoutX="388.0" layoutY="321.0" mnemonicParsing="false" text="Edit" />
+      <Button layoutX="388.0" layoutY="321.0" mnemonicParsing="false" text="Edit" onAction="#handleUpdateAdvButton"/>
       <Button layoutX="325.0" layoutY="321.0" mnemonicParsing="false" text="Add" onAction="#handleAddAdvButton"/>
       <Button layoutX="99.0" layoutY="73.0" mnemonicParsing="false" text="Search" onAction="#handleSearchAdvButton"/>
       <Button layoutX="440.0" layoutY="73.0" mnemonicParsing="false" text="Refresh" onAction="#handleAdvisorsListButton"/>
